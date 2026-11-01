@@ -1,0 +1,382 @@
+
+/* =========================================================
+   FOCUSNEST - FOCUS TIMER
+========================================================= */
+
+.timer-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 40px 50px;
+  box-sizing: border-box;
+}
+
+.timer-header {
+  margin-bottom: 28px;
+}
+
+.timer-page .page-title {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.timer-page .page-subtitle {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* =========================================================
+   TIMER CONTAINER
+========================================================= */
+
+.timer-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+
+  background: #151d32;
+  border: 1px solid #26304a;
+  border-radius: 24px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   MODE SWITCH
+========================================================= */
+
+.timer-mode-switch {
+  display: inline-flex;
+
+  padding: 5px;
+
+  background: #0f172a;
+
+  border: 1px solid #29344f;
+
+  border-radius: 12px;
+
+  margin-bottom: 25px;
+}
+
+.timer-mode-switch button {
+  border: none;
+  background: transparent;
+
+  color: #94a3b8;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.timer-mode-switch button:hover {
+  color: #e2e8f0;
+}
+
+.timer-mode-switch button.active {
+  background: #6366f1;
+  color: white;
+
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.25);
+}
+
+/* =========================================================
+   MODE LABEL
+========================================================= */
+
+.timer-mode-label {
+  color: #a5b4fc;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   TIMER CIRCLE
+========================================================= */
+
+.timer-circle {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 25px;
+}
+
+.timer-progress {
+  width: 270px;
+  height: 270px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-svg {
+  position: absolute;
+
+  width: 270px;
+  height: 270px;
+
+  transform: rotate(-90deg);
+}
+
+.timer-circle-bg {
+  fill: none;
+
+  stroke: #29344f;
+
+  stroke-width: 10;
+}
+
+.timer-circle-progress {
+  fill: none;
+
+  stroke: #6366f1;
+
+  stroke-width: 10;
+
+  stroke-linecap: round;
+
+  transition: stroke-dashoffset 0.5s linear;
+}
+
+.timer-time {
+  position: relative;
+
+  color: #f8fafc;
+
+  font-size: 52px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   START / PAUSE BUTTON
+========================================================= */
+
+.timer-start-btn {
+  min-width: 180px;
+
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color: white;
+
+  padding: 14px 30px;
+
+  border-radius: 11px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(99, 102, 241, 0.3);
+
+  transition: all 0.2s ease;
+}
+
+.timer-start-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(99, 102, 241, 0.4);
+}
+
+.timer-start-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   SECONDARY CONTROLS
+========================================================= */
+
+.timer-secondary-controls {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.timer-secondary-controls button {
+  border: 1px solid #29344f;
+
+  background: #111827;
+
+  color: #94a3b8;
+
+  padding: 9px 16px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.timer-secondary-controls button:hover {
+  border-color: #6366f1;
+
+  background: rgba(99, 102, 241, 0.1);
+
+  color: #a5b4fc;
+}
+
+/* =========================================================
+   SESSION CARD
+========================================================= */
+
+.timer-session-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  margin: 28px auto 0;
+
+  padding: 15px 20px;
+
+  max-width: 280px;
+
+  background: #0f172a;
+
+  border: 1px solid #29344f;
+
+  border-radius: 12px;
+
+  text-align: left;
+}
+
+.session-icon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  background: rgba(234, 179, 8, 0.12);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.timer-session-card span {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  margin-bottom: 4px;
+}
+
+.timer-session-card strong {
+  display: block;
+
+  color: #f8fafc;
+
+  font-size: 22px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+  .timer-page {
+    padding: 25px 20px 40px;
+  }
+
+  .timer-container {
+    padding: 25px 18px;
+  }
+
+  .timer-progress,
+  .timer-svg {
+    width: 230px;
+    height: 230px;
+  }
+
+  .timer-time {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 450px) {
+  .timer-page {
+    padding: 20px 12px;
+  }
+
+  .timer-container {
+    padding: 22px 12px;
+  }
+
+  .timer-mode-switch {
+    display: flex;
+    width: 100%;
+  }
+
+  .timer-mode-switch button {
+    flex: 1;
+    padding: 9px 8px;
+  }
+
+  .timer-progress,
+  .timer-svg {
+    width: 205px;
+    height: 205px;
+  }
+
+  .timer-time {
+    font-size: 38px;
+  }
+
+  .timer-start-btn {
+    width: 100%;
+  }
+}
